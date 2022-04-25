@@ -1,5 +1,6 @@
 import Book from './modules/book.js';
 import Books from './modules/books.js';
+import time from './modules/time.js';
 
 const div = document.querySelector('.books');
 const awesome = document.querySelector('.awesome');
@@ -70,14 +71,4 @@ contactBtn.addEventListener('click', () => {
   awesome.classList.remove('active');
 });
 
-const today = new Date();
-
-const date = `${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()}`;
-
-const hours = `${today.getHours()}:${today.getMinutes()}`;
-
-const dateTime = `${date}, ${hours}`;
-
-const time = document.getElementById('date');
-
-time.innerHTML = dateTime;
+time();
