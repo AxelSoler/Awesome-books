@@ -3,12 +3,12 @@ export default class Books {
     this.books = [];
   }
 
-  addBook(book) {
+  addBook = (book) => {
     this.books.push(book);
     localStorage.setItem('listBooks', JSON.stringify(this.books));
   }
 
-  deleteItem(id) {
+  deleteItem = (id) => {
     const book = document.getElementById(id);
     book.remove();
     this.books = this.books.filter((bookObj) => bookObj.id !== id);
